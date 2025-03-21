@@ -138,7 +138,7 @@ jobs:
               --set web-retriever.GOOGLE_API_KEY=${{ env.GOOGLE_API_KEY }} \
               --set web-retriever.GOOGLE_CSE_ID=${{ env.GOOGLE_CSE_ID }} \
               --set global.HUGGINGFACEHUB_API_TOKEN=${{ env.HFTOKEN }} \
-              --set global.modelUseHostPath=${CHART_MOUNT}
+              --set global.modelUseHostPath=${CHART_MOUNT} \
               --values ${{ env.CHART_FOLDER }}/${value_file} \
               $RELEASE_NAME ${{ env.CHART_FOLDER }} ; then
             echo "Failed to install chart ${{ inputs.workload }}"

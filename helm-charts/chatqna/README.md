@@ -89,3 +89,10 @@ Open a browser to access `http://<k8s-node-ip-address>:${port}` to play with the
 ## Troubleshooting
 
 If you encounter any issues, please refer to [ChatQnA Troubleshooting](troubleshooting.md)
+
+### Secruity label
+```
+kubectl label --overwrite ns NAMESPACE pod-security.kubernetes.io/enforce=privileged
+```
+### Model Storage
+global.modelUsePVC to point to your previously created PVC
